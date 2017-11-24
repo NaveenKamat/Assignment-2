@@ -3,15 +3,11 @@ console.log("Check Admin Functionality");
 exports.adminCheck=function(req, res,next)
 {
 	var adminCheck=req.query.adminCheck;
-	console.log(req.query.adminCheck);	
-	if(adminCheck)
+	if(adminCheck==0)
 	{	
-		console.log("Welcome Admin , Please peform the  operations. Today date is", GetDate()); 
+		console.log("Welcome Admin , Please peform the  operations"); 
 		next();
-
 	}
 	else
-	{	res.send("Your are not authorized to Access this operatons"); next();	}
-	
-
+	{	res.send("Your are not authorized to Access this operatons"); 	}
 };
